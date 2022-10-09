@@ -1,0 +1,56 @@
+@import "~@blueprintjs/core/lib/scss/variables";
+
+.Calc{
+  color: $indigo4;
+  border: 1px solid grey;
+  width: 50%;
+  height: 80%;
+  display: inline-flex;
+  align-content: center;
+  align-self: center;
+  align-items: space-between;
+  justify-content: space-around;
+  justify-items: space-around;
+  flex-direction: column;
+  .button-row{
+    flex: 1;
+    align-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    justify-items: space-around;
+  }
+
+  Button{
+    height: 100%;
+  }
+
+  .button-number button{
+    color: $gray4 !important;
+  }
+
+  .button{
+    height: 100%;
+    flex: 1;
+    &.f2{
+      flex: 1.5;
+    }
+  }
+
+  .bp4-input-group{
+    flex:1;
+  }
+
+  #input{
+    height: 100%;
+    text-align: right;
+    font-size: 5vh;
+  }
+
+  #output{
+    flex:2;
+    border: 1px;
+    height: 8em;
+  }
+}

@@ -1,26 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss'
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Layout from './components/routes/Layout';
+import Home from './components/routes/Home';
+import Calc from './components/routes/Calc';
+import AutoGrad from './components/routes/AutoGrad';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App bp4-dark">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout/>}>
+            <Route index element={<Home/>}/>
+            <Route path="calc" element={<Calc/>}/>
+            <Route path="autograd" element={<AutoGrad/>}/>
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </div>
-  );
+  )
 }
 
 export default App;
