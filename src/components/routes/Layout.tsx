@@ -13,6 +13,10 @@ const Layout = () => {
           <NavLink to="/"> <Button large minimal>Home</Button></NavLink>
           <NavLink to="calc"><Button large minimal>Calcualtor</Button></NavLink>
           <NavLink to="autograd"><Button large minimal>Autograd</Button></NavLink>
+          <NavLink to="cityinfo"><Button large minimal>City Info</Button></NavLink>
+        </Navbar.Group>
+        <Navbar.Group about="foo" align="right">
+          <Button icon="help" intent="primary" large minimal/>
         </Navbar.Group>
       </Navbar>
 

@@ -2,12 +2,15 @@
   "name": "react-playground",
   "version": "0.1.0",
   "private": true,
+  "homepage": ".",
   "dependencies": {
     "@blueprintjs/core": "^4.11.2",
+    "@blueprintjs/popover2": "^1.7.2",
+    "@blueprintjs/table": "^4.7.2",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
     "@testing-library/user-event": "^13.2.1",
-    "@types/jest": "^27.0.1",
+    "@types/jest": "^29.1.2",
     "@types/node": "^16.7.13",
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
@@ -44,7 +47,10 @@
     ]
   },
   "devDependencies": {
+    "jest": "^29.1.2",
     "node-sass": "^7.0.3",
-    "sass-loader": "^13.1.0"
+    "sass-loader": "^13.1.0",
+    "ts-jest": "^29.0.3",
+    "ts-node": "^10.9.1"
   }
 }

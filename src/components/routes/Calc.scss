@@ -1,10 +1,26 @@
 @import "~@blueprintjs/core/lib/scss/variables";
 
-.Calc{
-  color: $indigo4;
+.drawer-content{
+  margin: 10px;;
+  font-size: large;
+  code{
+    background-color: #5875a0;
+    padding-inline: 5px;
+  }
+}
+.help-panel {
+  position: absolute !important;
+  padding: 5px;
+  top: 50px;
+  right: 0px;
+  display: flex;
+  z-index: 2;
+}
+.Calc {
   border: 1px solid grey;
+  margin: 10px;
   width: 50%;
-  height: 80%;
+  height: 90%;
   display: inline-flex;
   align-content: center;
   align-self: center;
@@ -12,7 +28,8 @@
   justify-content: space-around;
   justify-items: space-around;
   flex-direction: column;
-  .button-row{
+
+  .button-row {
     flex: 1;
     align-content: center;
     align-items: center;
@@ -22,35 +39,107 @@
     justify-items: space-around;
   }
 
-  Button{
+  Button {
     height: 100%;
   }
 
-  .button-number button{
+  .button-number button {
     color: $gray4 !important;
   }
 
-  .button{
+  .button {
     height: 100%;
     flex: 1;
-    &.f2{
+
+    &.f2 {
       flex: 1.5;
     }
   }
 
-  .bp4-input-group{
-    flex:1;
+  .bp4-input-group {
+    flex: 1;
   }
 
-  #input{
+
+
+  #input {
     height: 100%;
     text-align: right;
     font-size: 5vh;
   }
 
-  #output{
-    flex:2;
+  #output {
+    flex: 2;
     border: 1px;
     height: 8em;
+    align-content: flex-end;
+    display: flex;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    flex-direction: column;
+    color: #1a1aff;
+
+    // negate hover selector
+    &:not(:hover) {
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
+    // with every child, gradually blend into darker and darker blue
+    // would've been more elegant with a loop here.
+    .stack-entry:nth-last-child(1) {
+      color: whitesmoke
+    }
+
+    .stack-entry:nth-last-child(2) {
+      color: #b3b3ff
+    }
+
+    .stack-entry:nth-last-child(3) {
+      color: #9999ff
+    }
+
+    .stack-entry:nth-last-child(4) {
+      color: #8080ff
+    }
+
+    .stack-entry:nth-last-child(5) {
+      color: #6666ff
+    }
+
+    .stack-entry:nth-last-child(6) {
+      color: #4d4dff
+    }
+
+    .stack-entry:nth-last-child(7) {
+      color: #3333ff
+    }
+
+    .stack-entry:nth-last-child(8) {
+      color: #1a1aff
+    }
+
+    .stack-entry {
+      font-size: 2em;
+      list-style: none;
+      align-items: flex-end;
+      display: flex;
+
+
+      .stack-op {
+        text-align: left;
+        flex: 1;
+      }
+
+      .stack-value {
+        text-align: right;
+        margin-inline: 50px;
+        flex: 1;
+      }
+    }
   }
 }

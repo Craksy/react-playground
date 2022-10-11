@@ -5,6 +5,7 @@ import Layout from './components/routes/Layout';
 import Home from './components/routes/Home';
 import Calc from './components/routes/Calc';
 import AutoGrad from './components/routes/AutoGrad';
+import CityInfo from './components/routes/CityInfo';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
             <Route index element={<Home/>}/>
             <Route path="calc" element={<Calc/>}/>
             <Route path="autograd" element={<AutoGrad/>}/>
+            <Route path="cityinfo" element={<CityInfo/>}/>
           </Route>
         </Routes>
       </BrowserRouter>

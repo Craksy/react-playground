@@ -1,0 +1,76 @@
+@import "~@blueprintjs/core/lib/scss/variables.scss";
+
+.city-info-container{
+    margin: 25px;;
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+
+    .city-info-table-container{
+        height: 80%;
+        flex: 1;
+        .bp4-table-container{
+            width: fit-content;
+        }
+
+    }
+
+    .city-info-details-container{
+        flex: 1;
+        height: 100%;
+        .subtitle{
+            margin: 0;
+            color: $light-gray1;
+            font-weight: 600;
+            font-stretch: semi-expanded;
+        }
+
+        .detail-row{
+            margin-top: 10px;
+            display: inline-flex;
+            flex-direction: row;
+            h5{
+                width: 150px;
+                text-align: left;
+            }
+            .bp4-tag{
+                margin-inline-end: 10px;
+            }
+            
+        }
+
+        .poi-collection{
+            align-items: flex-start;
+            text-align: start;
+            width: fit-content;
+            height: fit-content;
+        }
+
+        .poi-gallary{
+            margin-left: 20px;
+            align-items: flex-start;
+            text-align: start;
+            width: fit-content;
+            height: fit-content;
+        }
+
+    }
+
+}
+
+
+div.carousel{
+    width: 100%;
+    height: 100%;
+    ul.carousel-container{
+        li.carousel-item{
+            img{
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+
